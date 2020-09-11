@@ -17,7 +17,7 @@ if not pygame.mixer:
 
 
 def load_image(name, color_key=None):
-    fullname = os.path.join("main", name)  # Universal path that works everywhere
+    fullname = os.path.join("files", name)  # Universal path that works everywhere
     try:
         image = pygame.image.load(fullname)
     except pygame.error as message:
@@ -37,7 +37,7 @@ def load_sound(name):
 
     if not pygame.mixer:
         return NoneSound()
-    fullname = os.path.join("main", name)
+    fullname = os.path.join("files", name)
     try:
         sound = pygame.mixer.Sound(fullname)
     except pygame.error as message:
